@@ -1,4 +1,6 @@
 require "rails/render_hooks/version"
+require "active_support/concern"
+require "action_controller"
 
 module RenderHooks
   extend ActiveSupport::Concern
