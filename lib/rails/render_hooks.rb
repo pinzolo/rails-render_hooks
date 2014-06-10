@@ -44,3 +44,4 @@ module RenderHooks
   end
 end
 
+ActionController::Base.__send__(:include, RenderHooks)
