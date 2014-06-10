@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class SampleController < ActionController::Base
+  include RenderHooks
+
   before_filter :exec_before_action
   after_filter :exec_after_action
   around_filter :exec_around_action
