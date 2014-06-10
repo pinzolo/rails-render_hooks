@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "action_support", "~>4.1.0"
+gem "activesupport", "~>4.1.0"
 
 gemspec :path => "../"
 
