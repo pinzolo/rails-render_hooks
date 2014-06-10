@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Rails::RenderHooks::VERSION
   spec.authors       = ["pinzolo"]
   spec.email         = ["pinzolo@gmail.com"]
-  spec.summary       = %q{Add hooks around render method}
+  spec.summary       = %q{Add callbacks for render method}
   spec.description   = spec.summary
   spec.homepage      = "https://github.com/pinzolo/rails-render_hooks"
   spec.license       = "MIT"
