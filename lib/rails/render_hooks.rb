@@ -9,8 +9,14 @@ module RenderHooks
   end
 
   def render_with_render_hooks(*options, &block)
-    run_callbacks :process_render do
-      render_without_render_hooks(*options, &block)
+    if ActiveSupport::VERSION::STRING >= '4.0.0'
+      run_callbacks(:process_render) do
+        render_without_render_hooks(*options, &block)
+      end
+    else
+      run_callbacks(:process_render, action_name) do
+        render_without_render_hooks(*options, &block)
+      end
     end
   end
 
