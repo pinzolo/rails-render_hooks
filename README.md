@@ -63,3 +63,4 @@ Or install it yourself as:
 ## Changelog
 
 * v1.0.0 (2014-06-10 JST): First release
+* v2.0.0 (2019-04-20 JST): Compatible to recent ruby and rails versions
