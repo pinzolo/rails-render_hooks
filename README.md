@@ -33,8 +33,8 @@ Or install it yourself as:
 
 ## Ordering of hooks
 
-1. before_action (before_filter)
-1. around_action (around_filter)
+1. before_action
+1. around_action
 1. prepend_around_render
 1. prepend_before_render
 1. before_render
@@ -44,13 +44,13 @@ Or install it yourself as:
 1. after_render
 1. prepend_after_render
 1. prepend_around_render
-1. around_action (around_filter)
-1. after_action (after_filter)
+1. around_action
+1. after_action
 
 ## Supported versions
 
-* Ruby: 1.9.3, 2.0.0, 2.1.2
-* Rails: 3.2.x, 4.0.x, 4.1.x
+* Ruby: 2.3.x, 2.4.x, 2.5.x, 2.6.x
+* Rails: 4.2.x, 5.0.x, 5.1.x, 5.2.x
 
 ## Contributing
 
