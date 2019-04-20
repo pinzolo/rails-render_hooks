@@ -3,9 +3,9 @@ require 'test_helper'
 class SampleController < ActionController::Base
   include RenderHooks
 
-  before_filter :exec_before_action
-  after_filter :exec_after_action
-  around_filter :exec_around_action
+  before_action :exec_before_action
+  after_action :exec_after_action
+  around_action :exec_around_action
   prepend_before_render :exec_prepend_before_render
   before_render :exec_before_render, except: [:new]
   skip_before_render :exec_before_render, only: [:show]
