@@ -19,7 +19,7 @@ class SampleController < ActionController::Base
   attr_accessor :footmarks
 
   [:index, :new, :show].each do |action|
-    define_method(action) { render text: '' }
+    define_method(action) { render inline: '' }
   end
 
   def reset
