@@ -5,21 +5,17 @@ require "action_controller"
 module RenderHooks
   extend ActiveSupport::Concern
 
-  included do
-    define_callbacks :process_render
-    alias_method_chain :render, :render_hooks
-  end
-
-  def render_with_render_hooks(*options, &block)
-    if ActiveSupport::VERSION::STRING >= '4.0.0'
+  module Renderer
+    def render(*options, &block)
       run_callbacks(:process_render) do
-        render_without_render_hooks(*options, &block)
-      end
-    else
-      run_callbacks(:process_render, action_name) do
-        render_without_render_hooks(*options, &block)
+        super(*options, &block)
       end
     end
+  end
+
+  included do
+    define_callbacks :process_render
+    prepend Renderer
   end
 
   module ClassMethods
